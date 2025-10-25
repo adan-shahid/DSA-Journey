@@ -28,4 +28,3 @@ while len(competitors) > 1:
 print(win_name)
 
 
-

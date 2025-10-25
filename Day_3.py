@@ -1,17 +1,16 @@
 def remove_element(num1, val):
     k = 0
-    n = len(num1)
-    for i in range(0, n, 1):
+    for i in range(len(num1)):
         if num1[i] != val:
+            num1[k] = num1[i]
             k += 1
-    for j in range(0, n-1, 1):
-        if num1[j] == val:
-            num1.remove(num1[j])
-
-    return (k, num1)
-
-
-
+    return k, num1
+    
 num1 = [0,1,2,2,3,0,4,2]
 val = 2
 print(remove_element(num1, val))
+
+# Replacing the values
+# num = [1,2,3,4,5]
+# num[0], num[0+1] = num[0+1], num[0]
+# print(num)
