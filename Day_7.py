@@ -7,12 +7,16 @@ def rotate_array_by_right(arr, k):
     while i < k:
         ans_arr[i] = arr[n - k + i]
         i = i + 1
-    
-    while i < (n-k-1):
-        ans_arr[n-k-1+i] = arr[i]
-        i = i + 1
+   
+
+    j = 0
+    while j < (n-k):
+        ans_arr[k + j] = arr[j]
+        j = j + 1
     return ans_arr
 
-arr = [1,2,3,4,5,6,7]
-k = 3
+
+
+arr = [-1,-100,3,99]
+k = 2
 print(rotate_array_by_right(arr,k))
