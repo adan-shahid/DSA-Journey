@@ -14,9 +14,16 @@ def rotate_array_by_right(arr, k):
         ans_arr[k + j] = arr[j]
         j = j + 1
     return ans_arr
-
-
-
 arr = [-1,-100,3,99]
 k = 2
 print(rotate_array_by_right(arr,k))
+
+
+# Optimized code :
+arr = [1,2]
+k = 7
+n = len(arr)
+
+k = k % n
+arr[n-k:n], arr[0:n-k] = arr[0:n-k], arr[n-k:n]
+print(arr)
